@@ -617,6 +617,10 @@ video {
   gap: 1.25rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -709,6 +713,21 @@ video {
   color: rgb(126 34 206 / var(--tw-text-opacity, 1));
 }
 
+.text-neutral-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity, 1));
+}
+
+.text-neutral-400 {
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity, 1));
+}
+
+.text-neutral-300 {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity, 1));
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -733,53 +752,21 @@ video {
   font-weight: 400;
 }
 
-@keyframes button-animation {
-  0% {
-    background-position: top right;
-  }
-
-  100% {
-    background-position: top left;
-  }
-}
-
-@keyframes button-animation-rev {
-  0% {
-    background-position: top left;
-  }
-
-  100% {
-    background-position: top right;
-  }
-}
-
-a:hover, a:hover span {
-  animation: button-animation-rev 0.65s ease-out forwards;
-}
-
 .btn-first {
   border: 1px solid oklch(70.8% 0 0);
   display: inline-block;
-  background-image: linear-gradient(65deg, rgba(0,0,0,0) 50%, rgba(195,34,194,1) 50%);
-  background-size: 270%;
-  background-repeat: repeat;
-  background-position: top midle;
-  animation: button-animation 0.65s 0.15s ease-out forwards;
+  transition: all 0.2s ease-out;
 }
 
 .btn-first .btn-span {
   display: block;
   width: 100%;
   padding: 0.2rem 1.5rem;
-  background: grey;
-  background-size: 270%;
-  background-repeat: repeat;
-  background-position: top midle;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  animation: button-animation 0.65s 0.15s ease-out forwards;
+  color: oklch(92.2% 0 0);
+}
+
+.btn-first:hover {
+  background-color: oklch(49.1% 0.27 292.581);
 }
 
 .hover\:border-t-4:hover {
@@ -874,5 +861,9 @@ a:hover, a:hover span {
 
   .lg\:w-5\/6 {
     width: 83.333333%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 }
